@@ -1,114 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-/* Background for whole app */
+/* Background */
 body {
   margin: 0;
   font-family: "Georgia", serif;
   background: linear-gradient(to bottom right, #fff8e7, #fceabb);
-  color: #333;
-}
-
-/* Centering the card */
-.card-container {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-
-/* Wedding Card Styling */
-.wedding-card {
-  background: white;
-  border: 3px solid goldenrod;
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  width: 500px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
   overflow: hidden;
 }
 
-/* Add golden shine effect */
-.wedding-card::before {
+/* Center content */
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heart Button */
+.heart-button {
+  background: red;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: pulse 1.5s infinite;
+  transition: transform 0.3s ease;
+}
+
+.heart-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Ribbon Animation */
+.ribbon {
+  width: 220px;
+  height: 10px;
+  background: crimson;
+  margin-top: 20px;
+  position: relative;
+  animation: cutRibbon 2s forwards;
+}
+
+.ribbon::before,
+.ribbon::after {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 215, 0, 0.3),
-    transparent
-  );
-  transform: rotate(25deg);
-  animation: shine 6s infinite linear;
+  top: -8px;
+  width: 20px;
+  height: 25px;
+  background: crimson;
+  clip-path: polygon(100% 0, 0% 50%, 100% 100%);
 }
 
-@keyframes shine {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: 100%;
-  }
+.ribbon::before {
+  left: -20px;
+}
+.ribbon::after {
+  right: -20px;
+  transform: rotate(180deg);
 }
 
-/* Fancy Arabic heading */
-.bismillah {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: goldenrod;
-  font-family: "Scheherazade New", serif;
+@keyframes cutRibbon {
+  0% { width: 220px; opacity: 1; }
+  100% { width: 0; opacity: 0; }
 }
 
-/* Invitation text */
-.invite-text {
-  font-size: 16px;
-  margin-bottom: 20px;
+/* Wedding Card */
+.wedding-card {
+  background: white;
+  border: 3px solid goldenrod;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 500px;
+  max-width: 95%;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  animation: openCard 1s ease forwards;
+  transform-origin: top center;
+}
+
+@keyframes openCard {
+  from { opacity: 0; transform: scale(0.6) rotateX(-90deg); }
+  to { opacity: 1; transform: scale(1) rotateX(0); }
 }
 
 /* Groom name */
@@ -116,26 +101,11 @@ body {
   font-family: "Great Vibes", cursive;
   font-size: 42px;
   color: goldenrod;
-  margin: 10px 0;
 }
 
-/* Father name */
-.father-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 25px;
-  color: #555;
-}
-
-/* Details */
-.details {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #444;
-}
-
-.closing-text {
-  font-style: italic;
-  font-size: 15px;
-  color: #333;
+/* Couple image */
+.couple-img {
+  width: 160px;
+  border-radius: 12px;
+  border: 3px solid goldenrod;
 }

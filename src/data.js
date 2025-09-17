@@ -1,6 +1,6 @@
 // src/data.js
 const weddingData = {
-    groom: "Ali Khan",
+    groom: "NAVEED AHMAD",
     father: "Bashir Ahmad",
     brothers: ["Sohail Ahmad", "Asif Ahmad", "Naveed Ahmad", "Imran Ahmad"],
   };
