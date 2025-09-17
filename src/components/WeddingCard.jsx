@@ -43,8 +43,6 @@ const WeddingCard = ({ groom = "Naveed Ahmad", father = "Bashair Ahmad" }) => {
     <div className="wedding-card-viewport">
       {/* Audio placeholder - put your mp3 in public/ and name it wedding-song.mp3 */}
       <audio ref={audioRef} src={`${import.meta.env.BASE_URL}Song.mp3`} loop />
-
-
       {/* small decorative florals (corner decorations) */}
       <div className="floral top-left">🌸</div>
       <div className="floral top-right">🌺</div>
