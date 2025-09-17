@@ -1,0 +1,141 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* Background for whole app */
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(to bottom right, #fff8e7, #fceabb);
+  color: #333;
+}
+
+/* Centering the card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Wedding Card Styling */
+.wedding-card {
+  background: white;
+  border: 3px solid goldenrod;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 500px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add golden shine effect */
+.wedding-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 215, 0, 0.3),
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Fancy Arabic heading */
+.bismillah {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: goldenrod;
+  font-family: "Scheherazade New", serif;
+}
+
+/* Invitation text */
+.invite-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Groom name */
+.groom-name {
+  font-family: "Great Vibes", cursive;
+  font-size: 42px;
+  color: goldenrod;
+  margin: 10px 0;
+}
+
+/* Father name */
+.father-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Details */
+.details {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.closing-text {
+  font-style: italic;
+  font-size: 15px;
+  color: #333;
+}
