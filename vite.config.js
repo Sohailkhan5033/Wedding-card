@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react()],   // tells Vite to handle React/JSX
   server: {
-    host: "0.0.0.0",   // important for mobile access
-    port: 5173         // ya jo bhi port chaho
+    host: "0.0.0.0",    // allows access from other devices (like your phone)
+    port: 5173          // sets the dev server port (default is 5173)
   }
 });

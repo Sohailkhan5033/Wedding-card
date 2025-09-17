@@ -39,7 +39,6 @@ const WeddingCard = ({ groom = "Naveed Ahmad", father = "Bashair Ahmad" }) => {
       setPlaying(false);
     }
   };
-
   return (
     <div className="wedding-card-viewport">
       {/* Audio placeholder - put your mp3 in public/ and name it wedding-song.mp3 */}
