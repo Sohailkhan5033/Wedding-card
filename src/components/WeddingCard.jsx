@@ -42,7 +42,8 @@ const WeddingCard = ({ groom = "Naveed Ahmad", father = "Bashair Ahmad" }) => {
   return (
     <div className="wedding-card-viewport">
       {/* Audio placeholder - put your mp3 in public/ and name it wedding-song.mp3 */}
-      <audio ref={audioRef} src="/Song.mp3" loop />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}Song.mp3`} loop />
+
 
       {/* small decorative florals (corner decorations) */}
       <div className="floral top-left">🌸</div>
@@ -107,7 +108,8 @@ const WeddingCard = ({ groom = "Naveed Ahmad", father = "Bashair Ahmad" }) => {
 
             {/* Couple image (use public/couple.png) */}
             <div className="image-space">
-            <img src="/wedding.jpeg" alt="Couple" className="couple-img" />            </div>
+            <img src={`${import.meta.env.BASE_URL}wedding.jpeg`} alt="Couple" className="couple-img" />
+            </div>
 
             <p className="program-title">PROGRAMME IN-SHA-ALLAH</p>
             <p className="date-time">
