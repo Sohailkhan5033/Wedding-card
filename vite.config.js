@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Wedding-card/',   // important for GitHub Pages
   plugins: [react()],
-  build: {
-    outDir: 'dist',         // default build folder
-    sourcemap: false
+  server: {
+    host: true,  // allows mobile testing via LAN
+    port: 5173,
+    open: true
   }
 })
